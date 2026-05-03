@@ -67,7 +67,7 @@ body{
   /* 🔥 centered image */
   background:
     linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
-    url('https://maheerreddy948.github.io/TejuShashidharReddy/images/photo13.JPG') center center/cover no-repeat;
+    url('photo13.jpg') center center/cover no-repeat;
 
   filter:grayscale(20%) brightness(0.8);
 
@@ -321,160 +321,213 @@ footer{
   color:#555;
   line-height:1.6;
 }
-/* 🔥 GLOBAL IMAGE CENTER FIX */
-img{
-  display:block;
-  margin-left:auto;
-  margin-right:auto;
+
+:root{
+  --gold:#D4A853;
+  --maroon:#7A1E1E;   /* already exists */
+  --deep-maroon:#6b0000; /* 🔥 add this (matches live section) */
 }
 
-/* 🔥 INVITED IMAGE CENTER + RESPONSIVE */
-.invited img{
-  width:100%;
-  max-width:260px;
-  height:auto;
-  aspect-ratio:4/3;
-  object-fit:cover;
+/* CONTACT SECTION */
+.contact-section{
+  background: var(--deep-maroon); /* 🔥 same as live */
+  padding:100px 20px;
+  text-align:center;
+  color:white;
 }
 
-/* 🔥 GALLERY PERFECT CENTER + SPACING */
-.gallery{
-  display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
-  gap:20px;
-  padding:0 20px; /* equal left-right gap */
+/* subtle heart pattern */
+.contact-section::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:url('https://www.transparenttextures.com/patterns/hearts.png');
+  opacity:0.08;
 }
 
-.gallery img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  border-radius:15px;
+.contact-content{
+  position:relative;
+  z-index:2;
 }
 
-/* 🔥 HERO TEXT SAFE FOR SMALL SCREENS */
-.hero h1,
-.wedding-title,
-.bride,
-.groom{
-  word-wrap:break-word;
+.contact-tag{
+  display:inline-block;
+  background:#a52a2a;
+  padding:6px 20px;
+  border-radius:20px;
+  font-size:12px;
+  letter-spacing:2px;
+  margin-bottom:15px;
+}
+
+.contact-title{
+  font-family:'Playfair Display';
+  font-size:60px;
+  margin-bottom:10px;
+}
+
+.contact-title span{
+  font-family:'Great Vibes';
+}
+
+.contact-sub{
+  color:#ffdede;
+  margin-bottom:50px;
+}
+
+.contact-cards{
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  flex-wrap:wrap;
+}
+
+.contact-card{
+  background:rgba(255,255,255,0.08);
+  padding:30px 40px;
+  border-radius:20px;
+  min-width:280px;
+  backdrop-filter:blur(8px);
+  box-shadow:0 10px 30px rgba(0,0,0,0.2);
+  transition:0.3s;
+}
+
+.contact-card:hover{
+  transform:translateY(-5px);
+}
+
+.contact-name{
+  font-size:22px;
+  margin-bottom:10px;
+}
+
+.contact-phone{
+  font-size:18px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:10px;
+}
+
+/* ✅ Fix mobile top cut issue */
+body {
+  padding-top: 90px; /* space for navbar */
+}
+
+/* Better mobile spacing */
+@media (max-width: 768px) {
+
+  .nav {
+    top: 10px;
+    padding: 10px 15px;
+    border-radius: 30px;
+  }
+
+  body {
+    padding-top: 80px;
+  }
+
+  .hero {
+    height: auto; /* 🔥 important fix */
+    min-height: 100vh;
+    padding-top: 40px;
+  }
+
+  .hero-content {
+    padding: 20px;
+  }
+
+  .hero h1,
+  .wedding-title {
+    font-size: 42px;
+  }
+
+  .bride,
+  .groom {
+    font-size: 38px;
+  }
+
+  .top-text {
+    font-size: 16px;
+  }
+
+  .weds {
+    font-size: 18px;
+  }
+
+  .parents {
+    font-size: 14px;
+  }
+}
+/* ===== NEW LIVE SECTION ===== */
+.live-new{
+  background:#f5f0ea;
+  padding:100px 20px;
   text-align:center;
 }
 
-/* 🔥 MOBILE PERFECT ALIGN */
-@media(max-width:768px){
-  .nav{
-    flex-direction:column;
-    gap:10px;
-  }
-
-  .invited{
-    flex-direction:column;
-    text-align:center;
-  }
-
-  .invited-text{
-    text-align:center;
-  }
-}
-/* 🔥 MASTER CONTAINER ALIGNMENT FIX */
-.section,
-.hero-content,
-.nav{
-  width:100%;
-  max-width:1100px;
-  margin-left:auto;
-  margin-right:auto;
-  padding-left:20px;
-  padding-right:20px;
-  box-sizing:border-box;
-}
-
-/* 🔥 HERO PERFECT CENTER */
-.hero{
-  padding:0 20px;
-}
-
-.hero-content{
-  width:100%;
+.live-container{
   max-width:900px;
   margin:auto;
 }
 
-/* 🔥 INVITED SECTION FIX */
-.invited{
-  max-width:1000px;
-  margin:auto;
-  gap:40px;
+/* top badge */
+.live-tag{
+  display:inline-block;
+  background:#f3e6e6;
+  color:#c44;
+  padding:8px 18px;
+  border-radius:20px;
+  font-size:12px;
+  letter-spacing:2px;
+  margin-bottom:20px;
 }
 
-.invited img{
-  flex-shrink:0;
+/* heading */
+.live-title{
+  font-family:'Playfair Display';
+  font-size:60px;
+  color:#7A1E1E;
+  margin-bottom:15px;
 }
 
-.invited-text{
-  flex:1;
+.live-title span{
+  font-family:'Great Vibes';
+  color:#D4A853;
 }
 
-/* 🔥 GALLERY PERFECT GRID CENTER */
-.gallery{
-  max-width:1100px;
-  margin:auto;
-  padding:0 20px;
-  display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
-  justify-content:center;
+/* subtitle */
+.live-sub{
+  font-style:italic;
+  color:#a78b8b;
+  margin-bottom:30px;
 }
 
-/* 🔥 IMAGE CONSISTENCY */
-.gallery img,
-.invited img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  border-radius:15px;
+/* button */
+.live-btn{
+  display:inline-block;
+  padding:12px 28px;
+  border-radius:30px;
+  background:#D4A853;
+  color:white;
+  text-decoration:none;
+  font-weight:500;
+  transition:0.3s;
 }
 
-/* 🔥 TEXT ALIGN CONSISTENCY */
-.section{
-  text-align:center;
+.live-btn:hover{
+  background:#b8933f;
 }
 
-.invited-text{
-  text-align:left;
-}
-
-/* 🔥 MOBILE PERFECT STACK */
-@media (max-width:768px){
-
-  .nav{
-    width:95%;
-  }
-
-  .hero h1{
-    font-size:45px;
-  }
-
-  .wedding-title{
-    font-size:42px;
-  }
-
-  .bride,
-  .groom{
+/* MOBILE */
+@media(max-width:768px){
+  .live-title{
     font-size:38px;
   }
 
-  .invited{
-    flex-direction:column;
-    text-align:center;
-  }
-
-  .invited-text{
-    text-align:center;
-  }
-
-  .gallery{
-    grid-template-columns:1fr;
+  .live-sub{
+    font-size:14px;
+    padding:0 10px;
   }
 }
 </style>
@@ -570,7 +623,7 @@ document.getElementById("secs").innerText = Math.floor((d%60000)/1000);
   <h2 class="title">Invited <span>By</span></h2>
 
   <div class="invited">
-    <img src="images/photo6.JPG">
+    <img src="photo6.jpg">
 
     <div class="invited-text">
       <p><b>Smt. Yeruva Suguna</b></p>
@@ -583,20 +636,66 @@ document.getElementById("secs").innerText = Math.floor((d%60000)/1000);
 <section id="gallery" class="section">
   <h2 class="title">Photo <span>Gallery</span></h2>
   <div class="gallery">
-    <img src="images/photo2.JPG">
-    <img src="images/photo3.JPG">
-    <img src="images/photo4.JPG">
-    <img src="images/photo5.JPG">
-    <img src="images/photo12.JPG">
+    <img src="photo2.jpg">
+    <img src="photo3.jpg">
+    <img src="photo4.jpg">
+    <img src="photo5.jpg">
+    <img src="photo12.jpg">
   </div>
 </section>
 
-<section id="live" class="live">
-  <h2>Live Streaming</h2>
-  <a href="https://nvtl.in/ShashidharReddyWedsTejaswini" target="_blank">
-    ▶ Watch Live
-  </a>
+<section id="live" class="live-new">
+
+  <div class="live-container">
+
+    <div class="live-tag">● LIVE STREAM</div>
+
+    <h2 class="live-title">
+      Watch Our Wedding <span>Live</span>
+    </h2>
+
+    <p class="live-sub">
+      “Join us virtually and bless us from wherever you are in the world”
+    </p>
+
+    <a href="https://nvtl.in/ShashidharReddyWedsTejaswini" target="_blank" class="live-btn">
+      ▶ Watch Live
+    </a>
+
+  </div>
+
 </section>
+
+<section class="contact-section">
+  <div class="contact-content">
+
+    <div class="contact-tag">GET IN TOUCH</div>
+
+    <h2 class="contact-title">
+      Contact <span>Details</span>
+    </h2>
+
+    <p class="contact-sub">
+      For any queries or assistance, please reach out to our families.
+    </p>
+
+    <div class="contact-cards">
+
+      <div class="contact-card">
+        <div class="contact-name">Yeruva Maheer Reddy</div>
+        <div class="contact-phone">📞 +91 77940 40243 </div>
+      </div>
+
+      <div class="contact-card">
+        <div class="contact-name">B Sreedhar Reddy</div>
+        <div class="contact-phone">📞 +91 91827 90463</div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
 
 <section class="section">
   <iframe src="https://maps.google.com/maps?q=ACR%20Convention%20Hall%20Ibrahimpatnam&output=embed"></iframe>
@@ -606,6 +705,33 @@ document.getElementById("secs").innerText = Math.floor((d%60000)/1000);
 <audio id="music" loop>
 <source src="https://mp3tourl.com/audio/1777597489328-9b5b3cc9-03fc-4bdf-a4c6-07fe7f1c593e.mp3">
 </audio>
+
+<script>
+const music = document.getElementById("music");
+let isPlaying = false;
+let started = false;
+
+/* 🔥 autoplay on first click anywhere */
+document.addEventListener("click", function () {
+  if (!started) {
+    music.currentTime = 5;
+    music.play();
+    isPlaying = true;
+    started = true;
+  }
+});
+
+/* 🎵 toggle button */
+function playMusic() {
+  if (isPlaying) {
+    music.pause();
+    isPlaying = false;
+  } else {
+    music.play();
+    isPlaying = true;
+  }
+}
+</script>
 
 <footer>
   <h2 style="font-family:'Great Vibes';font-size:40px;">
@@ -630,29 +756,6 @@ function playMusic(){
     isPlaying = false;
   }
 }
-</script>
-<script>
-/* 🔥 AUTO PLAY MUSIC (mobile-friendly trick) */
-window.addEventListener("load", () => {
-  const m = document.getElementById("music");
-
-  // Try autoplay
-  let playPromise = m.play();
-
-  if (playPromise !== undefined) {
-    playPromise.then(() => {
-      isPlaying = true;
-    }).catch(() => {
-      // autoplay blocked → play on first tap
-      document.body.addEventListener("click", () => {
-        if(!isPlaying){
-          m.play();
-          isPlaying = true;
-        }
-      }, { once: true });
-    });
-  }
-});
 </script>
 </body>
 </html>
