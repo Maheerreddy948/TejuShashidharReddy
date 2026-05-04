@@ -277,7 +277,7 @@ footer{
   font-family:'Playfair Display';
   font-size:26px;
 
-  color:#FFD700;
+  color:#7A1E1E;
   letter-spacing:3px;
 
   text-shadow:0 2px 8px rgba(0,0,0,0.6);
@@ -953,6 +953,37 @@ iframe:hover{
   );
   background-size:100% 28px;
 }
+/* container */
+.hero{
+  position:relative;
+  min-height:100vh;
+  overflow:hidden;
+}
+
+/* image background */
+.hero-bg{
+  position:absolute;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  top:0;
+  left:0;
+  z-index:0;
+}
+
+/* overlay */
+.hero-overlay{
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.55);
+  z-index:1;
+}
+
+/* content on top */
+.hero-content{
+  position:relative;
+  z-index:2;
+}
 
 /* mobile */
 @media(max-width:768px){
@@ -1018,9 +1049,18 @@ iframe:hover{
 </div>
 
 <section class="hero">
+
+  <!-- 🔥 FAST LOADING BACKGROUND IMAGE -->
+  <img src="./images/photo13.JPG" 
+       alt="Wedding" 
+       class="hero-bg" 
+       fetchpriority="high">
+  <link rel="preload" as="image" href="./images/photo13.webp">
+
+  <!-- 🔥 DARK OVERLAY -->
+  <div class="hero-overlay"></div>
+
   <div class="hero-content invite">
-    
-    <div class="top-text">
       Sri Rasthu! | Shubhamasthu!! | Avignamasthu!!!
     </div>
 
@@ -1178,7 +1218,9 @@ document.getElementById("secs").innerText = Math.floor((d%60000)/1000);
 
   <div class="invited">
     <source srcset="./images/photo6.webp" type="image/webp">
-    <img src="./images/photo6.JPG" fetchpriority="high" width="300" height="200">
+    <img src="./images/photo6.JPG" width="300" height="200">
+    <link rel="preload" as="image" href="./images/photo6.webp" fetchpriority="high">
+
 
     <div class="invited-text">
       <p><b>Smt. Yeruva Suguna</b></p>
@@ -1191,12 +1233,16 @@ document.getElementById("secs").innerText = Math.floor((d%60000)/1000);
   <div class="gallery">
     <source srcset="./images/photo3.webp" type="image/webp">
     <img src="./images/photo3.JPG" fetchpriority="high" width="300" height="200">
+    <link rel="preload" as="image" href="./images/photo3.webp" fetchpriority="high">
     <source srcset="./images/photo4.webp" type="image/webp">
     <img src="./images/photo4.JPG" fetchpriority="high" width="300" height="200">
+    <link rel="preload" as="image" href="./images/photo4.webp" fetchpriority="high">
     <source srcset="./images/photo2.webp" type="image/webp">
     <img src="./images/photo2.JPG" fetchpriority="high" width="300" height="200">
+    <link rel="preload" as="image" href="./images/photo2.webp" fetchpriority="high">    
     <source srcset="./images/photo5.webp" type="image/webp">
     <img src="./images/photo5.JPG" fetchpriority="high" width="300" height="200">
+    <link rel="preload" as="image" href="./images/photo5.webp" fetchpriority="high">
   </div>
 </section>
 <section class="section venue">
