@@ -56,19 +56,27 @@ body{
   text-align:center;
   position:relative;
 }
-  .hero{
-  background-color:#6b0000; /* 🔥 instant fallback */
+ /* HERO WITH WATERMARK EFFECT */
+.hero{
+  position:relative;
+  min-height:100vh;
 
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+
+  /* 🔥 base color */
+  background-color:#6b0000;
+
+  /* 🔥 watermark image */
   background-image:
-    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+    linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), /* dark overlay */
     url('./images/photo13.JPG');
 
   background-position:center;
   background-size:cover;
   background-repeat:no-repeat;
-
-  /* smoother rendering */
-  will-change:transform;
 }
 
 /* ✅ FIXED: IMAGE FROM TOP */
@@ -1063,10 +1071,12 @@ iframe:hover{
 </div>
 
 <section class="hero">
-  <!-- 🔥 DARK OVERLAY -->
+
   <div class="hero-overlay"></div>
 
   <div class="hero-content invite">
+
+    <div class="top-text">
       Sri Rasthu! | Shubhamasthu!! | Avignamasthu!!!
     </div>
 
@@ -1077,11 +1087,13 @@ iframe:hover{
     <div class="weds">Weds</div>
 
     <h3 class="groom">Chi. Shashidhar Reddy</h3>
-    
+
     <p class="invite-quote">
       “Together with their families invite you to celebrate their wedding”
     </p>
+
   </div>
+
 </section>
 
 <section class="section">
