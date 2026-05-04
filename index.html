@@ -7,7 +7,6 @@
 <title>Tejaswini ❤️ Shashidhar</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Great+Vibes&family=DM+Sans&display=swap" rel="stylesheet">
-
 <style>
 :root{
   --gold:#D4A853;
@@ -56,6 +55,20 @@ body{
   align-items:center;
   text-align:center;
   position:relative;
+}
+  .hero{
+  background-color:#6b0000; /* 🔥 instant fallback */
+
+  background-image:
+    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+    url('./images/photo13.JPG');
+
+  background-position:center;
+  background-size:cover;
+  background-repeat:no-repeat;
+
+  /* smoother rendering */
+  will-change:transform;
 }
 
 /* ✅ FIXED: IMAGE FROM TOP */
@@ -1049,14 +1062,6 @@ iframe:hover{
 </div>
 
 <section class="hero">
-
-  <!-- 🔥 FAST LOADING BACKGROUND IMAGE -->
-  <img src="./images/photo13.JPG" 
-       alt="Wedding" 
-       class="hero-bg" 
-       fetchpriority="high">
-  <link rel="preload" as="image" href="./images/photo13.webp">
-
   <!-- 🔥 DARK OVERLAY -->
   <div class="hero-overlay"></div>
 
